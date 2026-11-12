@@ -10,17 +10,14 @@ import java.util.List;
 public class DocenteController {
     private final DocenteRepository repository;
 
-
     public DocenteController(DocenteRepository repository) {
         this.repository = repository;
     }
-
 
     @GetMapping
     public List<Docente> listar() {
         return repository.findAll();
     }
-
 
     @PostMapping
     public Docente guardar(@RequestBody Docente docente) {
